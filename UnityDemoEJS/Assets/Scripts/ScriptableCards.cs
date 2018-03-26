@@ -17,5 +17,5 @@ public class ScriptableCards : ScriptableObject {
     public bool isPurified = false;
     public string flavourText = "";
     public string description = "Abilities";
-    public string imageResourceName = "defaultCardImg";
+    public string imageName = "defaultCardImg";
 }
