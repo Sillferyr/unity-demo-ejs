@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2907964063
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2409ab2790640846d2686d88d303e486
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6f165f44e4778b6c9d85e7a145a54cb1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/ocelote_del_templo_img.jpg
+- Assets/Resources/Quetzal_img.png
+- Assets/Resources/puerta_del_sol_img.png
+- Assets/Resources/el_dorado_img.png
+- Assets/Resources/alaric_i_img.png
+- Assets/Resources/quetzalcoatl_img.jpg
+- Assets/Resources/defaultCardMat.mat
+- Assets/Resources/mosquete_img.png
+- Assets/Resources/defaultCardImg.png
+- Assets/Resources/melusina_img.png
+- Assets/Resources/haures_img.png
+- Assets/Resources/baile_sobre_el_puente_img.png
+- Assets/Resources/khanda_img.png
+Dependencies: []

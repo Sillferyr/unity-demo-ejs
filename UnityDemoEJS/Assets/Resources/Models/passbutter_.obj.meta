@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 3dca47b5d55729d45b1aee956edee1cf
+timeCreated: 1522202110
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: aperture
+    100002: body
+    100004: Default
+    100006: gray_0
+    100008: gray_1
+    100010: gray_2
+    100012: gray_3
+    100014: iris
+    100016: led_base
+    100018: lent
+    100020: lent_body
+    100022: lent_ring
+    100024: //RootNode
+    100026: red_cable
+    100028: red_led
+    100030: rollers_center
+    100032: scrwee
+    100034: track
+    100036: yellow_cable
+    400000: aperture
+    400002: body
+    400004: Default
+    400006: gray_0
+    400008: gray_1
+    400010: gray_2
+    400012: gray_3
+    400014: iris
+    400016: led_base
+    400018: lent
+    400020: lent_body
+    400022: lent_ring
+    400024: //RootNode
+    400026: red_cable
+    400028: red_led
+    400030: rollers_center
+    400032: scrwee
+    400034: track
+    400036: yellow_cable
+    2100000: apertureMat
+    2100002: bodyMat
+    2100004: DefaultMat
+    2100006: gray_0Mat
+    2100008: gray_1Mat
+    2100010: gray_2Mat
+    2100012: gray_3Mat
+    2100014: irisMat
+    2100016: led_baseMat
+    2100018: lentMat
+    2100020: lent_bodyMat
+    2100022: lent_ringMat
+    2100024: red_cableMat
+    2100026: red_ledMat
+    2100028: rollers_centerMat
+    2100030: scrweeMat
+    2100032: trackMat
+    2100034: yellow_cableMat
+    2300000: aperture
+    2300002: body
+    2300004: Default
+    2300006: gray_0
+    2300008: gray_1
+    2300010: gray_2
+    2300012: gray_3
+    2300014: iris
+    2300016: led_base
+    2300018: lent
+    2300020: lent_body
+    2300022: lent_ring
+    2300024: red_cable
+    2300026: red_led
+    2300028: rollers_center
+    2300030: scrwee
+    2300032: track
+    2300034: yellow_cable
+    3300000: aperture
+    3300002: body
+    3300004: Default
+    3300006: gray_0
+    3300008: gray_1
+    3300010: gray_2
+    3300012: gray_3
+    3300014: iris
+    3300016: led_base
+    3300018: lent
+    3300020: lent_body
+    3300022: lent_ring
+    3300024: red_cable
+    3300026: red_led
+    3300028: rollers_center
+    3300030: scrwee
+    3300032: track
+    3300034: yellow_cable
+    4300000: aperture
+    4300002: body
+    4300004: Default
+    4300006: gray_0
+    4300008: gray_1
+    4300010: gray_2
+    4300012: gray_3
+    4300014: iris
+    4300016: led_base
+    4300018: lent
+    4300020: lent_body
+    4300022: lent_ring
+    4300024: red_cable
+    4300026: red_led
+    4300028: rollers_center
+    4300030: scrwee
+    4300032: track
+    4300034: yellow_cable
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
