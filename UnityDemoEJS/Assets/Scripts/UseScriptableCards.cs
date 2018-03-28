@@ -6,64 +6,75 @@ using System.IO;
 
 public class UseScriptableCards : MonoBehaviour
 {
+    public GameObject cardPrefab;
     //list containing the references to our Scriptable objects
     public List<ScriptableCards> myScriptableCardList = new List<ScriptableCards>();
     //list containing the spawn positions for our Scriptable objects when instantiated
     public List<Vector3> spawnPoints;
+    
 
     //contains instantiated GameObjects for ingame modification
     private GameObject[] cardObjectArray;
     private bool areCardsInstantiated = false;
-
+    private enum cardType { Allied, Talisman, Gold, Weapon, Totem, Reign };
 
     // Use this for initialization
     void Start()
     {
         cardObjectArray = new GameObject[myScriptableCardList.Count];
-
-        // avoid to overwrite Scriptable Objects. 
-        //List<ScriptableCards> copy = Instantiate(myScriptableCardList); //uno por uno 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            onEscapeButton();
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            changeDamage(2);
-        }
+
     }
 
     public void onInstantiateCardsButton() {
-        //only instantiates once, could alternatively delete all cards and reinstantiate
+        //only instantiates if there are no cards or they all were destroyed.
+        if (!areCardsInstantiated)
+        {
+            //click spam protection
+            areCardsInstantiated = true;
+            int i = 0;
+            //sync instantiation of cards with default image as placeholder while asyncCardLoad works 
+            //this is assuming it's convenient performance-wise to at least load the default prefab in this fashion 
+            foreach (Vector3 spawn in spawnPoints)
+            {                
+                GameObject Card = Instantiate(cardPrefab);
+                Card.transform.position = spawn;
+                cardObjectArray[i++] = Card;
+            }
+            //DO ASYNC LOAD!!
+            StartCoroutine( asyncCardLoad() );
+        }
+    }
+
+    /* doesn't use prefab nor events, unconvenient.
+    public void createCardsWithOnlyCode()
+    {
+        //only instantiates if there are no cards or they all were destroyed.
         if (!areCardsInstantiated)
         {
             int i = 0;
             //sync instantiation of cards with default image as placeholder while asyncCardLoad works
             foreach (Vector3 spawn in spawnPoints)
-            {                
-                //GameObject Card = new GameObject("Card");
+            {
                 GameObject Card = GameObject.CreatePrimitive(PrimitiveType.Quad);
-
                 Card.transform.position = spawn;
                 Card.transform.localScale += new Vector3(12F, 20F, 0);
 
                 //load defaults from Resources folder
-                Card.GetComponent<Renderer>().material = (Material)Resources.Load("defaultCardMat");
+                Card.GetComponent<Renderer>().material = (Material)Resources.Load("blankCardMat");
                 Card.GetComponent<Renderer>().material.mainTexture = Resources.Load("defaultCardImg") as Texture2D;
-
-                //TODO: assign scriptableobject data to Card
 
                 cardObjectArray[i++] = Card;
             }
-            //TODO: async load
-            StartCoroutine( asyncCardLoad() );
+            //DO ASYNC LOAD!!
+            StartCoroutine(asyncCardLoad());
         }
     }
+    */
 
     //async load from assetbundle
     IEnumerator asyncCardLoad() {
@@ -79,34 +90,29 @@ public class UseScriptableCards : MonoBehaviour
         }
 
         int i = 0;
-        //TODO: foreach (ScriptableCards CardData in myScriptableCardList) , using i and assigning the loaded texture on cardObjectArray[i]
+        //load textures.
+        foreach (ScriptableCards CardData in myScriptableCardList) {
 
-        var assetLoadRequest = myLoadedAssetBundle.LoadAssetAsync("defaultCardImg"); //load number i card image
-        yield return assetLoadRequest;
+            var assetLoadRequest = myLoadedAssetBundle.LoadAssetAsync<Texture>(CardData.imageName); 
+            yield return assetLoadRequest;
 
-        //GameObject prefab = assetLoadRequest.asset as GameObject;
-        //Instantiate(prefab);
+            Texture img = assetLoadRequest.asset as Texture;
+            if (img == null) { Debug.LogError("Null object (texture) extracted from assetbundle"); }
 
-        myLoadedAssetBundle.Unload(false);
-            
-        
+            cardObjectArray[i].GetComponent<Renderer>().material.mainTexture = img;
+            //loading card values
+            cardObjectArray[i].GetComponent<CardBehaviour>().strength = CardData.strength;
+            cardObjectArray[i].GetComponent<CardBehaviour>().cost = CardData.cost;
+            cardObjectArray[i].GetComponent<CardBehaviour>().type =(CardBehaviour.cardType)CardData.type;
+            cardObjectArray[i++].GetComponent<CardBehaviour>().isfury = CardData.isFury;
+            //etc...
 
+        }
+        myLoadedAssetBundle.Unload(false);      
     }
 
-    //TODO:
-    public void changeDamage(int change)
+    public void destroyEventResponse()
     {
-        //change gameObject
-        //foreach (var Card in cardObjectArray){
-        //    Card.strength += change;       }
-
-        //change scriptableObject
-        //foreach (ScriptableCards CardData in myScriptableCardList){
-        //    CardData.Strength += change;                          }  /
-    }
-
-    public void onEscapeButton() {
-        Resources.UnloadUnusedAssets();
-        //TODO: load main scene
+        areCardsInstantiated = false;
     }
 }

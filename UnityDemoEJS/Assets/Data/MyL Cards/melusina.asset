@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab0e465980eafe348bcc927ec0bf5122, type: 3}
-  m_Name: Scriptable Card 5
+  m_Name: melusina
   m_EditorClassIdentifier: 
-  cardName: New ScriptableCard
-  type: 3
-  cost: 2
-  strength: 0
+  cardName: melusina_img
+  type: 0
+  cost: 4
+  strength: 3
   isFury: 0
   isUnBlockable: 0
-  isUnExileable: 0
+  isUnExileable: 1
   isUnique: 1
   isFed: 0
   isPurified: 0
   flavourText: 
   description: Abilities
-  imageResourceName: defaultCardImg
+  imageName: melusina_img

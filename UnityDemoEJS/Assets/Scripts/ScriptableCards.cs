@@ -5,10 +5,10 @@ using System.Collections;
 public class ScriptableCards : ScriptableObject {
     public string cardName = "New ScriptableCard";
     public enum cardType { Allied, Talisman, Gold, Weapon, Totem, Reign };
-    public cardType type = cardType.Allied; 
+    public cardType type;
     public int cost = 0;
     public int strength = 0;
-    //TODO: bitwise attributes as a single int?
+    //extra: bitwise attributes as a single int binary chain, ¿worth it?
     public bool isFury = false;
     public bool isUnBlockable = false;
     public bool isUnExileable = false;

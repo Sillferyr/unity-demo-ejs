@@ -143,7 +143,6 @@ public class JsonPHAPI : MonoBehaviour {
 
     //extra: instantiate new gameobject instead
     public void updateOutputPhoto(Texture2D image) {
-        Debug.Log("updateOutputPhoto call ");
         outputRawImage.GetComponent<RawImage>().texture = image;
     }
 }

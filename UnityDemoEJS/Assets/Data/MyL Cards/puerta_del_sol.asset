@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab0e465980eafe348bcc927ec0bf5122, type: 3}
-  m_Name: Scriptable Card 2
+  m_Name: puerta_del_sol
   m_EditorClassIdentifier: 
-  cardName: Card 2
-  type: 1
-  cost: 0
+  cardName: puerta_del_sol
+  type: 4
+  cost: 1
   strength: 0
   isFury: 0
   isUnBlockable: 0
-  isUnExileable: 1
+  isUnExileable: 0
   isUnique: 1
   isFed: 0
   isPurified: 0
   flavourText: 
   description: Abilities
-  imageResourceName: defaultCardImg
+  imageName: puerta_del_sol_img

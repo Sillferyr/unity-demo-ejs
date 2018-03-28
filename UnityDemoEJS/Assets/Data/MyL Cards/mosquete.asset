@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab0e465980eafe348bcc927ec0bf5122, type: 3}
-  m_Name: Scriptable Card 7
+  m_Name: mosquete
   m_EditorClassIdentifier: 
-  cardName: New ScriptableCard
-  type: 5
-  cost: 0
+  cardName: mosquete
+  type: 3
+  cost: 1
   strength: 0
   isFury: 0
   isUnBlockable: 0
   isUnExileable: 0
   isUnique: 0
   isFed: 0
-  isPurified: 0
+  isPurified: 1
   flavourText: 
   description: Abilities
-  imageResourceName: defaultCardImg
+  imageName: mosquete_img

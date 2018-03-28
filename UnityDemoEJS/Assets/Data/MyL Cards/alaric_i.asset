@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab0e465980eafe348bcc927ec0bf5122, type: 3}
-  m_Name: Scriptable Card 4
+  m_Name: alaric_i
   m_EditorClassIdentifier: 
-  cardName: New ScriptableCard
-  type: 2
-  cost: 0
-  strength: 0
-  isFury: 0
+  cardName: alaric_i
+  type: 0
+  cost: 1
+  strength: 2
+  isFury: 1
   isUnBlockable: 0
   isUnExileable: 0
   isUnique: 0
@@ -23,4 +23,4 @@ MonoBehaviour:
   isPurified: 0
   flavourText: 
   description: Abilities
-  imageResourceName: defaultCardImg
+  imageName: alaric_i_img

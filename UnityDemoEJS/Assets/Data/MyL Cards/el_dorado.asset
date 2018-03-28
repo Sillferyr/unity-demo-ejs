@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab0e465980eafe348bcc927ec0bf5122, type: 3}
-  m_Name: Scriptable Card 6
+  m_Name: el_dorado
   m_EditorClassIdentifier: 
-  cardName: New ScriptableCard
+  cardName: el_dorado
   type: 4
-  cost: 5
+  cost: 2
   strength: 0
   isFury: 0
   isUnBlockable: 0
   isUnExileable: 0
-  isUnique: 1
+  isUnique: 0
   isFed: 0
   isPurified: 0
   flavourText: 
   description: Abilities
-  imageResourceName: defaultCardImg
+  imageName: el_dorado_img
